@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567407978003",
+    "project_id": "notfall-6c3bf",
+    "storage_bucket": "notfall-6c3bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567407978003:android:692a0bb882070790e141e6",
+        "android_client_info": {
+          "package_name": "com.inkrodriguez.notfall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567407978003-k0gvhhps59s0rcdg1mas8qsgvg2ulm8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHplCeMpb2tqpg5GR4kUGRYjBjI5KyUwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567407978003-k0gvhhps59s0rcdg1mas8qsgvg2ulm8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
