@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/llInfoMes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/standard"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/monthTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="InfoMês"
+            android:textColor="@color/white_transparent_2"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="176dp" />
+    </LinearLayout>
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/llInfoMes"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:compactCalendarBackgroundColor="@color/standard"
+        app:compactCalendarCurrentDayBackgroundColor="#40064A"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/white_transparent"
+        app:compactCalendarDisplayOtherMonthDays="true"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        app:compactCalendarOtherMonthDaysTextColor="@color/white_transparent_2"
+        app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="true"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextColor="#fff"
+        app:compactCalendarTextSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llInfoMes" />
+
+    <ListView
+        android:id="@+id/event_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/compactcalendar_view"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAgendarConsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compactcalendar_view" />
+
+    <Button
+        android:id="@+id/btnAgendarConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="Agendar Nova Consulta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

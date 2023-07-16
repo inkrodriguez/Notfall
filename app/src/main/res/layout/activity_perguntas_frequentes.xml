@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PerguntasFrequentesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/standard"
+                    android:text="1. Como é identificado um caso de emergência ou urgência?"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Em geral, os casos de emergência e urgência apresentam sintomas que se iniciaram há pouco tempo. Pacientes com sintomas crônicos como dores no joelho há meses e insônia, por exemplo, não necessitam de atendimento imediato e, portanto, não devem procurar um pronto-socorro."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/standard"
+                    android:text="2. Como é feita a classificação dos pacientes?" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="A classificação dos pacientes é feita no Hospital Angelina Caron seguindo um protocolo específico. Todos os pacientes recebem uma senha e passam por triagem, onde são considerados os sintomas apresentados, o tempo de início desses sintomas e os sinais vitais, como pressão arterial e frequência cardíaca." />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/standard"
+                    android:text="3. Por que é importante classificar os pacientes?" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="A classificação organiza a prioridade de atendimento de acordo com a gravidade de cada paciente. Por exemplo, alguém que está tendo um infarto do coração deve ser triado e imediatamente encaminhado para atendimento, pois o tempo é um grande aliado no sucesso do tratamento desse tipo de problema. É a partir das informações coletadas na triagem que os enfermeiros podem determinar quem são os pacientes que precisam de atendimento no hospital e quanto tempo podem aguardar por ele." />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/standard"
+                    android:text="4. Se o caso não for de urgência ou emergência, onde o paciente deve buscar atendimento médico?" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Nessas ocasiões, o paciente deve buscar as Unidades Básicas de Saúde (UBSs) ou Unidades de Pronto Atendimento (UPAs)." />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/standard"
+                    android:text="5. Por que o paciente deve evitar idas desnecessárias aos prontos-socorros?" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="A procura desnecessária do pronto-socorro leva à superlotação dos serviços de emergência, o que acaba por congestionar o sistema de triagem, o atendimento médico, a organização de leitos, o setor de realização de exames e assim por diante. Quem sai prejudicado é o usuário, especialmente o paciente mais grave, que passa a ter um atendimento mais lento e menos eficaz por falta de leitos e recursos em geral."/>
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

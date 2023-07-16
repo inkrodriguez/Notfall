@@ -15,36 +15,18 @@ class LoginRepository(context: Context) {
     val sharedPreferences = context.getSharedPreferences("infoUser", Context.MODE_PRIVATE)
     val context = context
 
+    suspend fun recoverUserFirebase(username: String): User? {
+        val collectionRef = firestoreManager.firestore.collection("users")
 
-    fun rememberUser(editUsername: Editable, editPassword: Editable) {
-        val editor = sharedPreferences.edit()
-        editor.putString("username", editUsername.toString())
-        editor.putString("password", editPassword.toString())
-        editor.apply()
-    }
-
-    suspend fun loginUser(editUsername: Editable, editPassword: Editable): Boolean {
-        return withContext(Dispatchers.IO) {
-            try {
-                val querySnapshot = collectionUsers.get().await()
-                querySnapshot.forEach {
-                    val username = it.getString("username")
-                    val password = it.getString("password")
-                    val categoria = it.getString("categoria")
-
-                    if (editUsername.toString() == username && editPassword.toString() == password) {
-                        return@withContext true
-                    }
-                }
-                false
-            } catch (e: Exception) {
-                false
-            }
+        val querySnapshot = collectionRef.whereEqualTo("username", username).get().await()
+        for (document in querySnapshot) {
+            val username = document.getString("username")
+            val password = document.getString("password")
+            val categoria = document.getString("categoria")
+            val specialty = document.getString("specialty")
+            val user = User(username.toString(), password.toString(), categoria.toString(), specialty.toString())
+            return user
         }
-    }
-
-
-    fun createUser(username: String, password: String, categoria: Int){
-
+        return null
     }
 }
